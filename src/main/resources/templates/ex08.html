@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<!-- 자바스크립트 인라이닝 th:inline ="javascript
+자바스크립트에 맞게 적절히 변환해주는 편리한 기능  -->
+<script type="text/javascript" th:inline="javascript">
+ let firstName =  /*[[${firstName}]]*/"" 
+ let arr = /*[[${list}]]*/
+ console.log(`이름 : ${firstName}`)
+ console.log(arr[0]) 
+ 
+ let user = /*[[${vo}]]*/
+ console.log(user)
+ 
+
+</script>
+</body>
+</html>

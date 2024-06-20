@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang=”en” xmlns:th=”http://www.thymeleaf.org”>
+<head>
+<meta charset="UTF-8">
+<title>ex01</title>
+</head>
+<body>
+<!--th:* 타임리프 전용 속성, 브라우저는 이를 무시한다.  -->
+
+<!--th:text, th:utext 
+	JSP의 EL표현식인 ${}와 마찬가지로 ${}를 사용해서 컨트롤러에서 전달받은 데이터에 접근할 수 있다.
+ -->
+
+ <div th:text="${lastName}">이자리에는 성이들어감</div>
+	<div>[[${lastName}]]</div>
+	<hr>
+	<!-- 문자열 결합과 리터럴 치환 -->
+	<span th:text="'My name is '+${lastName}+', '+${firstName}"></span><br>
+	<span th:text="|My name is ${lastName}, ${firstName}|"></span><br>
+	
+	<!-- 태그까지 같이나옴 -->
+	<span th:text="${'<i>Yonghyun, Kim</i>'}">성과 이름</span><br>
+	<!-- utext를 사용하면 태그는 안나옴  -->
+	<span th:utext="${'<i>Yonghyun, Kim</i>'}">성과 이름</span><br>
+	
+	
+	
+</body>
+</html>
